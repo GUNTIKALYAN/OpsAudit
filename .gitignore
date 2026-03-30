@@ -36,7 +36,6 @@ data/
 
 # OUTPUTS
 outputs/
-*.png
 *.jpg
 *.jpeg
 
@@ -48,6 +47,7 @@ architectire.md
 outputs/
 data/
 demo/
+temp/
 
 # TEST / CACHE
 .pytest_cache/
