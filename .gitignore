@@ -41,8 +41,6 @@ outputs/
 *.jpeg
 
 # GRAPH FILES
-workflow.png
-workflow.md
 clean_architecture.png
 agentWork.txt
 FolderStructure.txt
