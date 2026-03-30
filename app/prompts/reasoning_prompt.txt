@@ -1,0 +1,37 @@
+You are given a list of detected data issues.
+
+For each issue, you must:
+
+1. Explain the business impact:
+   - Why does this issue matter?
+   - What could go wrong if ignored?
+
+2. Assign severity:
+   - "low" → minor inconvenience
+   - "medium" → moderate impact
+   - "high" → critical business risk
+
+3. Suggest a fix:
+   - Provide a clear, actionable recommendation
+   - Avoid generic advice
+
+IMPORTANT RULES:
+- Output must be valid JSON
+- Do not include explanations outside JSON
+- Keep responses concise and structured
+
+INPUT FORMAT:
+{
+  "issues": [...]
+}
+
+OUTPUT FORMAT:
+[
+  {
+    "type": "issue_type",
+    "column": "column_name",
+    "impact": "business impact explanation",
+    "severity": "low | medium | high",
+    "suggestion": "actionable fix"
+  }
+]

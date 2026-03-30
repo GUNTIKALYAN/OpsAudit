@@ -1,0 +1,69 @@
+# PYTHON
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+agents/
+
+# ENV VARIABLES 
+.env
+.env.*
+*.env
+
+# IDE / EDITOR
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS FILES
+.DS_Store
+Thumbs.db
+
+# LOGS
+*.log
+
+# DATA FILES 
+data/
+*.csv
+*.json
+
+
+
+# OUTPUTS
+outputs/
+*.png
+*.jpg
+*.jpeg
+
+# GRAPH FILES
+workflow.png
+workflow.md
+clean_architecture.png
+agentWork.txt
+FolderStructure.txt
+architectire.md
+outputs/
+data/
+demo/
+
+# TEST / CACHE
+.pytest_cache/
+.coverage
+htmlcov/
+
+# JUPYTER 
+.ipynb_checkpoints/
+
+# BUILD / DIST
+build/
+dist/
+*.egg-info/
+
+# MISC
+*.sqlite3
+*.db
