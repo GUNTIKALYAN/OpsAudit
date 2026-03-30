@@ -52,6 +52,7 @@ OpsAudit AI combines both:
     }
   ]
 }
+```
 
 
 ---
@@ -139,8 +140,8 @@ The system combines:
 
 ### 1. Clone the Repository
 
-```bash
 git clone https://github.com/GUNTIKALYAN/OpsAudit.git
+
 cd OpsAudit
 
 ### 2. Create Virtual Environment
@@ -154,10 +155,13 @@ pip install -r requirements.txt
 
 ### 4. Setup Environment Variables
 Create a .env file in the root directory:
+
 GROQ_API_KEY=your_api_key_here
 
 Start API Server
+
 uvicorn app.main:app --reload
+
 Open: http://127.0.0.1:8000/docs
 
 ---
@@ -279,7 +283,7 @@ This system combines both:
 - Business rule enforcement
 
 ## Project Structure
-
+```
 OpsAudit/
 │
 ├── app/
@@ -345,6 +349,7 @@ OpsAudit/
 ├── run.py                         # CLI runner (quick execution)
 ├── README.md                      
 └── workflow.png
+```
 
 
 ---
