@@ -287,67 +287,60 @@ This system combines both:
 OpsAudit/
 │
 ├── app/
-│   ├── main.py                     # Entry point (API/CLI trigger)
-│   ├── config.py                   # Global settings (API keys, flags)
-│
-│   ├── graph/                      # LangGraph orchestration
-│   │   ├── builder.py              # Build agent workflow
-│   │   ├── state.py                # Shared state across agents
-│   │   └── nodes.py                # Register all agent nodes
-│
-│   ├── agents/                     # Core AI agents
+│   ├── agents/
+│   │   ├── anomaly_agent.py
 │   │   ├── data_ingestion_agent.py
 │   │   ├── duplicate_agent.py
-│   │   ├── missing_data_agent.py
 │   │   ├── logic_validation_agent.py
-│   │   ├── anomaly_agent.py
-│   │   ├── reasoning_agent.py      # LLM reasoning + severity scoring
-│   │   └── reporting_agent.py      # Final structured output
-│
-│   ├── services/                   # Non-AI logic (clean separation)
-│   │   ├── data_loader.py
-│   │   ├── data_profiler.py        # Basic stats (null %, unique, etc.)
-│   │   ├── rule_engine.py          # Logic validation rules
-│   │   ├── anomaly_detector.py
-│   │   └── scoring.py              # Severity scoring logic
-│
-│   ├── schemas/                   # Data contracts
-│   │   ├── state_schema.py
-│   │   ├── issue_schema.py
-│   │   └── report_schema.py
-│
-│   ├── prompts/                   # LLM prompts (important for eval)
+│   │   ├── missing_data_agent.py
+│   │   ├── reasoning_agent.py
+│   │   └── reporting_agent.py
+│   │
+│   ├── api/
+│   │   ├── controller.py
+│   │   └── routes.py
+│   │
+│   ├── core/
+│   │   └── runner.py
+│   │
+│   ├── graph/
+│   │   ├── builder.py
+│   │   ├── nodes.py
+│   │   └── state.py
+│   │
+│   ├── prompts/
 │   │   ├── reasoning_prompt.txt
 │   │   └── system_context.txt
-│
-│   ├── api/                       # Deployment layer (FastAPI)
-│   │   ├── routes.py
-│   │   └── controller.py
-│
+│   │
+│   ├── schemas/
+│   │   ├── issue_schema.py
+│   │   ├── report_schema.py
+│   │   └── state_schema.py
+│   │
+│   ├── services/
+│   │   ├── anomaly_detector.py
+│   │   ├── data_loader.py
+│   │   ├── data_profiler.py
+│   │   ├── llm_client.py
+│   │   ├── rule_engine.py
+│   │   └── scoring.py
+│   │
 │   ├── utils/
-│   │   ├── logger.py
+│   │   ├── constants.py
+│   │   ├── graph_visualizer.py
 │   │   ├── helpers.py
-│   │   └── constants.py
+│   │   └── logger.py
+│   │
+│   ├── config.py
+│   └── main.py
 │
+├── outputs/
+│   └── audit_report.json
 │
-├── data/                          # Sample datasets
-│   ├── sample_dirty_data.csv
-│   └── sample_clean_data.csv
-│
-├── outputs/                       # Generated reports
-│   ├── audit_report.json
-│
-├── demo/                          # For recruiter/demo clarity
-│   ├── demo_script.md             # How to run + expected output
-│   └── screenshots/               
-│
-├── tests/ (optional but bonus)
-│   ├── test_agents.py
-│   └── test_pipeline.py
-│
+├── .env
+├── architecture.md
+├── README.md
 ├── requirements.txt
-├── run.py                         # CLI runner (quick execution)
-├── README.md                      
 └── workflow.png
 ```
 
