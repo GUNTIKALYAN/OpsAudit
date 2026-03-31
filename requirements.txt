@@ -1,8 +1,10 @@
-requests
 fastapi
 uvicorn
 pandas
+numpy
 scikit-learn
+requests
+python-dotenv
 openai
 groq
-numpy
+loguru
