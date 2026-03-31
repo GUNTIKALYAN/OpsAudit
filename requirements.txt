@@ -1,0 +1,8 @@
+requests
+fastapi
+uvicorn
+pandas
+scikit-learn
+openai
+groq
+numpy
